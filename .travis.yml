@@ -11,5 +11,4 @@ install:
 script:
   - qmake Music-analyzer.pro #we gonna compile for Unit test first
   - make
-  - cd Tests
-  - ./tst_tests
+  - ./Tests/./tst_tests
