@@ -9,6 +9,14 @@ class MusicAnalizer : public QObject
 public:
     explicit MusicAnalizer(QObject *parent = 0);
 
+    typedef struct songDataAnalyzed{
+        int speed;
+        int rate;
+    }songDataAnalyzed_t;
+    int analyzeSong(QString filename);
+    int getSpeed(QString filename);
+public slots:
+
 signals:
 
 public slots:
