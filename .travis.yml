@@ -2,15 +2,13 @@ sudo: required
 dist: precise
 
 before_install:
-  - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
-  - sudo apt-get -qq update 
-#  - sudo apt-get install -y libqt5multimedia5
-  - sudo apt-get install -qq libqt5webkit5-dev qtdeclarative5-dev
+  - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
+  - sudo apt-get update -qq
 
 install:
-#  - sudo apt-get install -y qt5-default qttools5-dev-tools #install necessary Qt files
+  - sudo apt-get -y install qt55multimedia
 
 script:
-  - qmake Music-analyzer.pro #we gonna compile for Unit test first
+  - source /opt/qt55/bin/qt55-env.sh
+  - /opt/qt55/bin/qmake Music-analyzer.pro
   - make
-  - ./Tests/./tst_tests
