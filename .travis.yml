@@ -1,11 +1,9 @@
 sudo: required
 dist: precise
 
-#before_install:
-#   -  sudo add-apt-repository ppa:beineri/opt-qt551 -y; fi
-#  - sudo apt-get update -qq
 before_install:
-  - sudo apt-get -qq update
+  - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
+  - sudo apt-get -qq update 
   - sudo apt-get install -y libqt5multimedia5
 
 install:
