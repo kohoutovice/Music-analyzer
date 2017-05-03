@@ -8,6 +8,5 @@ install:
     - sudo apt-get -y install qt57-meta-full qt57multimedia
 script:
     - source /opt/qt57/bin/qt57-env.sh
-    - qmake -qt=qt5 -v
-    - qmake -qt=qt5
+    - qmake 
     - make
