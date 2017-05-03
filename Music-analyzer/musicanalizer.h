@@ -2,7 +2,7 @@
 #define MUSICANALIZER_H
 
 #include <QObject>
-
+#include <QAudioDecoder>
 class MusicAnalizer : public QObject
 {
     Q_OBJECT
@@ -13,13 +13,16 @@ public:
         int speed;
         int rate;
     }songDataAnalyzed_t;
+public slots:
     int analyzeSong(QString filename);
     int getSpeed(QString filename);
-public slots:
+    void readBuffer();
 
 signals:
 
-public slots:
+private:
+     QAudioDecoder *decoder;
+
 };
 
 #endif // MUSICANALIZER_H
