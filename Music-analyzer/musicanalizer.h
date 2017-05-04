@@ -17,6 +17,7 @@ public slots:
     int analyzeSong(QString filename);
     int getSpeed(QString filename);
     void readBuffer();
+    void updateProgress();
 
 signals:
 
