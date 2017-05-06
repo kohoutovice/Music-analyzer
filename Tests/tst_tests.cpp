@@ -1,5 +1,6 @@
 #include <QString>
 #include <QtTest>
+#include "musicanalyzer.h"
 
 class Tests : public QObject
 {
@@ -10,6 +11,7 @@ public:
 
 private Q_SLOTS:
     void speed();
+    void peakFrequencyTest();
 };
 
 Tests::Tests()
@@ -18,7 +20,11 @@ Tests::Tests()
 
 void Tests::speed()
 {
-    QVERIFY2(true, "Failure");
+    MusicAnalyzer m;
+}
+
+void Tests::peakFrequencyTest(){
+
 }
 
 QTEST_APPLESS_MAIN(Tests)

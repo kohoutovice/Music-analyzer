@@ -10,7 +10,7 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    musicanalizer.cpp
+    musicanalyzer.cpp
 
 HEADERS += \
-    musicanalizer.h
+    musicanalyzer.h

@@ -1,10 +1,12 @@
 #include <QCoreApplication>
-#include <musicanalizer.h>
+#include <musicanalyzer.h>
+
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    MusicAnalizer m;
-    m.getSpeed("sugar.mp3");
+    MusicAnalyzer m(NULL,"komorniA440hz.mp3");
+    m.run();
     return a.exec();
 }

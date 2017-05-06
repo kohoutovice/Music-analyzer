@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += testlib
+QT       += testlib multimedia
 
 QT       -= gui
 
@@ -15,5 +15,9 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += tst_tests.cpp
+SOURCES += tst_tests.cpp \
+    ../Music-analyzer/musicanalyzer.cpp
+HEADERS += ../Music-analyzer/musicanalyzer.h
+
+INCLUDEPATH += ../Music-analyzer
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
